@@ -39,19 +39,45 @@ document.addEventListener("keydown", function(e) {
  //get currect posistion for Food and for  player
  var foodY = Number(document.getElementById("burger").getAttribute("y"))
  var foodX = Number(document.getElementById("burger").getAttribute("x"))
+ var burger = document.getElementById("burger");
 
  if (stitchXVal > foodX && stitchXVal < foodX + width && stitchYVal > foodY && stitchYVal < foodY + height){
-   // PART 5
+   randX = randomNumber(50, 700)
+   burger.setAttribute("x", randX)
    console.log("overlap")
  }
  foodY = Number(document.getElementById("pizza").getAttribute("y"))
  foodX = Number(document.getElementById("pizza").getAttribute("x"))
+ var pizza = document.getElementById("pizza");
+
 
  if (stitchXVal > foodX && stitchXVal < foodX + width && stitchYVal > foodY && stitchYVal < foodY + height){
    var randX= randomNumber(50,700)
+   pizza.setAttribute("x", randX)
    console.log("overlap")
  }
 
+
+
+if(foodEaten == 5){
+  document.getElementById().pauseAnimation
+  var timeStop = Date.now()
+  var timeDuration timeStop - timeStart
+  timeDuration = timeDuration/1000
+  document.getElementById("totalTime").textContent
+}
+
+
 })
 
-food.setAttribute("x", )
+
+<text id="score" x="600" y="100">0</text>
+
+
+var foodEaten=0
+
+if(part1 && part2  ){
+  foodEaten = foodEaten + 1
+
+  document.getElementById("score").textContent = foodEaten
+}
