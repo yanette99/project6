@@ -9,6 +9,11 @@ var stitchXVal = Number(stitch.getAttribute("x"));
 var stitchYVal = Number(stitch.getAttribute("Y"));
 var height = 80;
 var width= 80;
+var foodEaten =0;
+var timeStart = Date.now()
+
+
+
 document.addEventListener("keydown", function(e) {
  if (e.keyCode == 37) {
    document.getElementById("stitch").setAttribute("x", stitchXVal - 15);
@@ -45,6 +50,8 @@ document.addEventListener("keydown", function(e) {
    randX = randomNumber(50, 700)
    burger.setAttribute("x", randX)
    console.log("overlap")
+   foodEaten = foodEaten + 1
+   document.getElementById("scorenumber").textContent = foodEaten
  }
  foodY = Number(document.getElementById("pizza").getAttribute("y"))
  foodX = Number(document.getElementById("pizza").getAttribute("x"))
@@ -55,29 +62,19 @@ document.addEventListener("keydown", function(e) {
    var randX= randomNumber(50,700)
    pizza.setAttribute("x", randX)
    console.log("overlap")
+    foodEaten = foodEaten + 1
+    document.getElementById("scorenumber").textContent = foodEaten
  }
 
 
 
-if(foodEaten == 5){
-  document.getElementById().pauseAnimation
+if(foodEaten == 3){
+  document.getElementById("screen").pauseAnimations()
   var timeStop = Date.now()
-  var timeDuration timeStop - timeStart
+  var timeDuration = timeStop - timeStart
   timeDuration = timeDuration/1000
-  document.getElementById("totalTime").textContent
+  document.getElementById("totalTime").textContent = timeDuration
 }
 
 
 })
-
-
-<text id="score" x="600" y="100">0</text>
-
-
-var foodEaten=0
-
-if(part1 && part2  ){
-  foodEaten = foodEaten + 1
-
-  document.getElementById("score").textContent = foodEaten
-}

@@ -9,24 +9,32 @@
   </head>
   <body>
     <!-- page content -->
-<svg width="80%" viewBox="0 0 800 385" style="background:url('http://wallpaperwarrior.com/wp-content/uploads/2016/06/Beach-Wallpaper-3-1024x576.jpg'); background-size: 100%;">
+<svg id="screen" width="80%" viewBox="0 0 800 385" style="background:url('http://wallpaperwarrior.com/wp-content/uploads/2016/06/Beach-Wallpaper-3-1024x576.jpg'); background-size: 100%;">
 
- <image id="stitch" x="250" y="20" width="80" height="80" xlink:href="https://1.bp.blogspot.com/-NIn54wuJcCc/Vth7N7f6stI/AAAAAAAAE_w/gMr1YHhpS8w/s200/photo.jpg
-"/>
+<image id="stitch" x="250" y="20" width="80" height="80" xlink:href="https://1.bp.blogspot.com/-NIn54wuJcCc/Vth7N7f6stI/AAAAAAAAE_w/gMr1YHhpS8w/s200/photo.jpg"/>
 
 <image id="burger" x="350" y="15" width="80" height="80" xlink:href="http://www.clipartbest.com/cliparts/dT7/oMR/dT7oMRkBc.png">
-    <animate id="burger1" attributeName="y" from="100" to="250" dur="3s" begin="0s; burger2.end"/>
-    <animate id="burger2" attributeName="y" from="250" to="100" dur="3s" begin="burger1.end"/>
+    <animate id="burger1" attributeName="y" from="80" to="250" dur="1s" begin="0s; burger2.end"/>
+    <animate id="burger2" attributeName="y" from="250" to="80" dur="1s" begin="burger1.end"/>
 </image>
 
 <image id="pizza" x="150" y="15" width="80" height="80" xlink:href="http://www.clipartbest.com/cliparts/nTE/BGd/nTEBGdgTA.png">
-      <animate id="pizza1" attributeName="y" from="100" to="250" dur="3s" begin="0s; pizza2.end"/>
-      <animate id="pizza2" attributeName="y" from="250" to="100" dur="3s" begin="pizza1.end"/>
+      <animate id="pizza1" attributeName="y" from="85" to="250" dur="3s" begin="0s; pizza2.end"/>
+      <animate id="pizza2" attributeName="y" from="250" to="85" dur="3s" begin="pizza1.end"/>
+</image>
+
+<image id="villain" x="" y="" width="80" height="80" xlink:href="http://vignette4.wikia.nocookie.net/villains/images/9/9d/Captain_Gantu.png/revision/latest?cb=20140728151004">
+      <animate id="villain1" attributeName="y" from="80" to="250" dur="2s" begin="0s; villain2.end"/>
+      <animate id="villain2" attributeName="y" from="250" to="80" dur="2s" begin="villain1.end"/>
 </image>
 
 
   <text x="325" y="35" font-family="sans-serif" font-size="25" fill="white">Food Game</text>
-  <text id="totalTime" x="600" y="300">0</text>
+  <text id="totalTimeText" x="600" y="300">Total Time:</text>
+  <text id="totalTime" x="690" y="300"></text>
+  <text id="score" x="600" y="325">Score:</text>
+  <text id="scorenumber" x="645" y="325">0</text>
+
 
 
 </svg>
